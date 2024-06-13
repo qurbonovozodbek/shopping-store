@@ -22,7 +22,7 @@ function WomenDress() {
 
   return (
     <div className="product">
-      <h1>Beauty Make-Up</h1>
+      <h1>Women Dress</h1>
       <div className="products">
         {beauty.map((product) => (
           <div className="product-card" onClick={() => handleProduct(product.id)}>

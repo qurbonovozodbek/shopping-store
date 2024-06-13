@@ -1,0 +1,135 @@
+.category {
+    background-color: #135d66;
+}
+.category h1 {
+    color: #e3fef7;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.category .category-lists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 50px;
+}
+
+#card {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    position: relative; /* Added to contain the pseudo-element */
+  
+}
+
+#card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(232, 230, 230, 0.3);
+    transition: all 0.5s ease-in-out;
+    animation: shadow 0.5s ease-in-out;
+}
+
+#card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-in-out;
+    animation: shadow 0.5s ease-in-out;
+}
+
+#card:hover::before {
+    width: 100%;
+}
+  
+  .category .category-lists #card:hover {
+    background-position: 90% 10%;
+    box-shadow: rgb(7, 9, 15) 0px 20px 50px -25px;
+  }
+  
+  .category .category-lists #card:hover .btn {
+    display: block;
+  }
+  
+  #card .btn {
+    display: none;
+    position: relative; /* Ensure the button is above the pseudo-element */
+    z-index: 1; /* Ensure the button is above the pseudo-element */
+    animation: btnSlide 0.5s ease-out;
+    margin-left: 20px;
+    background-color: #000;
+    border: none;
+    color: #ffd277;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 0 20px #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid #000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #card .btn:hover {
+    border: 2px solid #ffd277;
+  }
+  
+  @keyframes btnSlide {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+
+
+  .card1 { background: url('../assets/card1.jpg'); }
+  .card2 { background: url('../assets/card2.jpg'); }
+  .card3 { background: url('../assets/card3.jpg'); }
+  .card4 { background: url('../assets/card4.jpg'); }
+  .card5 { background: url('../assets/card5.jpg'); }
+  .card6 { background: url('../assets/card6.jpg'); }
+  .card7 { background: url('../assets/card7.jpg'); }
+  .card8 { background: url('../assets/card8jpg.jpg'); }
+  .card9 { background: url('../assets/card9jpg.jpg'); }
+  .card10 { background: url('../assets/card10.jpg'); }
+  .card11 { background: url('../assets/card11.jpg'); }
+  .card12 { background: url('../assets/card12.jpg'); }
+  .card13 { background: url('../assets/card13.jpg'); }
+  .card14 { background: url('../assets/card14.jpg'); }
+  .card15 { background: url('../assets/card15.jpg'); }
+  .card16 { background: url('../assets/card16.jpg'); }
+  .card17 { background: url('../assets/card17.jpg'); }
+  .card18 { background: url('../assets/card18.jpg'); }
+  .card19 { background: url('../assets/card19.jpg'); }
+  .card20 { background: url('../assets/card20.jpg'); }
+  .card21 { background: url('../assets/card21.jpg'); }
+  .card22 { background: url('../assets/card22.jpg'); }
+  .card23 { background: url('../assets/card23jpg.jpg'); }
+  .card24 { background: url('../assets/card24.jpg'); }

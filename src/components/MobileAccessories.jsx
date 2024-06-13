@@ -22,7 +22,7 @@ function Mobile() {
 
   return (
     <div className="product">
-      <h1>Mobile-accessories</h1>
+      <h1>Mobile accessories</h1>
       <div className="products">
         {beauty.map((product) => (
           <div className="product-card" onClick={() => handleProduct(product.id)}>

@@ -40,8 +40,6 @@ function Single() {
       const timer = setTimeout(() => {
         setAlert({ show: false, message: "" });
       }, 4000);
-
-      // Clear timeout if component unmounts
       return () => clearTimeout(timer);
     }
   }, [alert]);
@@ -73,32 +71,22 @@ function Single() {
       discountPercentage: single.discountPercentage
     };
   
-    // Retrieve existing products from local storage
     let products = JSON.parse(localStorage.getItem("products")) || [];
-  
-    // Check if the product already exists in the list
-    const existingProductIndex = products.findIndex(
+      const existingProductIndex = products.findIndex(
       (product) => product.id === single.id
     );
   
     let cartQuantity = parseInt(localStorage.getItem("cartQuantity")) || 0;
-  
     if (existingProductIndex !== -1) {
-      // If product exists, update the quantity
       products[existingProductIndex].quantity = counter;
       setAlert({ show: true, message: "Product quantity updated" });
     } else {
-      // If product does not exist, add it to the list
       products.push(data);
       cartQuantity += 1;
       setAlert({ show: true, message: "Product added to cart" });
     }
-  
-    // Save the updated products list to local storage
     localStorage.setItem("products", JSON.stringify(products));
     localStorage.setItem("cartQuantity", cartQuantity);
-  
-    // Update the state to trigger UI update
     window.dispatchEvent(new Event('storage'));
   }
   

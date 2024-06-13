@@ -1,0 +1,94 @@
+header nav a {
+  color: #e3fef7;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header nav a::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  background: #e3fef7;
+  transition: width 0.3s;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  transition: width 0.4s;
+}
+header nav a .link-icon {
+  margin-bottom: -2px;
+}
+header nav .active {
+  color: #77b0aa;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  margin-left: 290px;
+}
+
+.inp {
+  border-style: none;
+  width: 30px;
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  background-color: #77b0aa;
+  box-shadow: 0px 0px 3px #f3f3f3;
+  padding-right: 40px;
+  color: #fff;
+}
+
+.inp::placeholder,
+.inp {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+}
+
+.inp::placeholder {
+  color: #e3fef7;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: #e3fef7;
+  right: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+  outline: none;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: transparent;
+  transition: 0.2s linear;
+  right: 0;
+}
+
+.icon:focus ~ .inp,
+.inp:focus {
+  box-shadow: none;
+  width: 250px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 3px solid #77b0aa;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}

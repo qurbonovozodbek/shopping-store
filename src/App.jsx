@@ -31,6 +31,7 @@ import WomenShoes from './components/womens-shoes'
 import WomenWatches from './components/womens-watches'
 import Home from './layout/Home'
 import Singleee from './single/Singleee'
+import Cart from './layout/Cart'
 
 function App() {
 
@@ -38,8 +39,8 @@ function App() {
     <>
       <Routes>
       <Route path='/' element={<Layout />}>
-        <Route index element={<Products />} />
-        <Route path='/home' element={<Home />}/>
+        <Route index element={<Home />} />
+        <Route path='/product' element={<Products />}/>
         <Route path='/categories' element={<Categories />}></Route>
         <Route path='/beauty' element={<Beauty />} />
         <Route path='/fragrances' element={<Fragrances />}></Route>
@@ -67,6 +68,7 @@ function App() {
         <Route path='/womens-watches' element={<WomenWatches />}></Route>
         <Route path='/single' element={<Single />}></Route>
         <Route path='/singleee' element={<Singleee />}></Route>
+        <Route path='/cart' element={<Cart />}></Route>
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Route>
     </Routes>
