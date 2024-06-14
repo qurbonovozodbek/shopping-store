@@ -266,10 +266,10 @@
     overflow: hidden;
     margin-left: 20px;
   }
-  
+/*   
   .Btn::before {
     position: absolute;
-    content: "see product";
+    content: "";
     color: #ffd277;
     display: flex;
     align-items: center;
@@ -295,7 +295,7 @@
   .Btn:active {
     transform: scale(0.95);
     transition-duration: 0.1s;
-  }
+  } */
 
   
 

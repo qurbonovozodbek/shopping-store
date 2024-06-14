@@ -720,7 +720,7 @@ main {
   color: rgb(238, 74, 74);
 }
 
-.Btn {
+/* .Btn {
   width: 140px;
   height: 40px;
   border: none;
@@ -774,7 +774,7 @@ main {
 .Btn:active {
   transform: scale(0.95);
   transition-duration: 0.1s;
-}
+} */
 
 
 #alert {
