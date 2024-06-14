@@ -483,10 +483,8 @@ main {
   gap: 40px;
   position: absolute;
   border-radius: 40px;
-  /* border: 3px solid #77B0AA; */
   top: 20%;
   left: 25%;
-  /* transform: translate(-50%, -50%); */
   width: 50%;
   height: 50%;
   backdrop-filter: blur(40px);
@@ -502,7 +500,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1000; /* Ensuring overlay is below modal */
+  z-index: 1000;
   transition: all 0.5s ease-in-out;
 }
 
@@ -583,13 +581,11 @@ main {
   border: 2px solid #77B0AA;
 }
 
-/* For Firefox */
 .shopping-carts {
   scrollbar-width: thin;
-  scrollbar-color: #77B0AA #003c43; /* Red thumb, dark background */
+  scrollbar-color: #77B0AA #003c43; 
 }
 
-/* For WebKit browsers */
 .shopping-carts::-webkit-scrollbar {
   width: 12px;
 }
@@ -600,7 +596,7 @@ main {
 
 .shopping-carts::-webkit-scrollbar-thumb {
   background-color: #ff0000;
-  border-radius: 6px; /* Makes the ends rounded */
+  border-radius: 6px; 
 }
 
 .shopping-carts::-webkit-scrollbar-thumb:hover {
@@ -780,7 +776,6 @@ main {
   transition-duration: 0.1s;
 }
 
-/* Single.css */
 
 #alert {
   position: absolute;

@@ -1,4 +1,3 @@
-// // JavaScript code to hide .hover-cart when mouse leaves both .quantity and .hover-cart
 // document.addEventListener("DOMContentLoaded", function() {
 //     const quantity = document.querySelector(".quantity");
 //     const hoverCart = document.querySelector(".hover-cart");
@@ -21,12 +20,12 @@
 //       const isHoveringHoverCart = hoverCart.contains(event.target);
   
 //       if (!isHoveringQuantity && !isHoveringHoverCart) {
-//         hoverCart.style.right = "-300px"; // Slide the cart out of view
+//         hoverCart.style.right = "-300px";
 //       }
 //     });
   
 //     quantity.addEventListener("mouseover", function() {
-//       hoverCart.style.right = "-10px"; // Slide the cart back into view
+//       hoverCart.style.right = "-10px";
 //     });
 //   });
   

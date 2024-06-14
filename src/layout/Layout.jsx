@@ -75,7 +75,7 @@ function Layout() {
 
   useEffect(() => {
     if (searchValue === "") {
-      setFilteredItems([]); // Clear filtered items when search is empty
+      setFilteredItems([]); 
     } else {
       const filtered = search.filter((item) =>
         item.title.toLowerCase().includes(searchValue.toLowerCase())

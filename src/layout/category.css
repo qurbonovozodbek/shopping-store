@@ -31,7 +31,7 @@
     align-items: center;
     justify-content: start;
     overflow: hidden;
-    position: relative; /* Added to contain the pseudo-element */
+    position: relative;
   
 }
 
@@ -74,8 +74,8 @@
   
   #card .btn {
     display: none;
-    position: relative; /* Ensure the button is above the pseudo-element */
-    z-index: 1; /* Ensure the button is above the pseudo-element */
+    position: relative; 
+    z-index: 1;
     animation: btnSlide 0.5s ease-out;
     margin-left: 20px;
     background-color: #000;

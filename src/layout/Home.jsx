@@ -93,7 +93,6 @@ function Home() {
     { name: "Addis Ababa", lat: 9.0327, lng: 38.7469 },
     { name: "Algiers", lat: 36.7372, lng: 3.0863 },
     { name: "Accra", lat: 5.6037, lng: -0.187 },
-    // Add more cities as needed
   ];
 
   return (
@@ -112,7 +111,7 @@ function Home() {
         </div>
         <div className="hero-right">
           <Globe
-            width={500} // Set width and height as needed
+            width={500}
             height={500}
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
             pointsData={cities}
@@ -121,7 +120,7 @@ function Home() {
             pointLabel={(d) => d.name}
             pointColor={() => "#135d66"}
             pointAltitude={0.02}
-            pointSize={5} // Adjust point size as needed
+            pointSize={5}
             labelsData={cities}
             labelLat={(d) => d.lat}
             labelLng={(d) => d.lng}

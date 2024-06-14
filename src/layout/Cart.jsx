@@ -32,7 +32,6 @@ function Cart() {
     const newQuantity = quantity - 1;
     localStorage.setItem("cartQuantity", newQuantity);
 
-    // Dispatch custom event to update quantity in other components
     window.dispatchEvent(new Event("storage"));
   };
 
@@ -86,25 +85,25 @@ function Cart() {
   }
 
   function handleNumber(e) {
-    let input = e.target.value.replace(/[^0-9]/g, ""); // Remove all existing spaces
+    let input = e.target.value.replace(/[^0-9]/g, ""); 
     if (input.length > 16) {
-      input = input.slice(0, 16); // Limit to 16 digits
+      input = input.slice(0, 16);
     }
-    let formattedInput = input.match(/.{1,4}/g)?.join(" ") || ""; // Add a space every 4 digits
+    let formattedInput = input.match(/.{1,4}/g)?.join(" ") || ""; 
     e.target.value = formattedInput;
     console.log(e.target.value);
     setCardNumber(e.target.value);
   }
 
   function handleData(e) {
-    let input = e.target.value.replace(/[^0-9]/g, ""); // Remove non-numeric characters
+    let input = e.target.value.replace(/[^0-9]/g, ""); 
 
     if (input.length > 4) {
-      input = input.slice(0, 4); // Limit to 4 digits
+      input = input.slice(0, 4);
     }
 
     if (input.length >= 2) {
-      input = input.slice(0, 2) + "/" + input.slice(2); // Add '/' after the first 2 digits
+      input = input.slice(0, 2) + "/" + input.slice(2); 
     }
 
     e.target.value = input;
@@ -112,9 +111,9 @@ function Cart() {
     setExpiryDate(e.target.value);
   }
   function handleCvv(e) {
-    let input = e.target.value.replace(/[^0-9]/g, ""); // Remove non-numeric characters
+    let input = e.target.value.replace(/[^0-9]/g, "");
     if (input.length > 3) {
-      input = input.slice(0, 3); // Limit to 3 digits
+      input = input.slice(0, 3);
     }
     e.target.value = input;
     console.log(e.target.value);
@@ -123,7 +122,6 @@ function Cart() {
 
   function validate(cardNumber, expiryDate, cvv) {
     if (cardNumber.length !== 19) {
-      // 16 digits + 3 spaces
       setNumberError("Invalid card number");
       return false;
     } else {

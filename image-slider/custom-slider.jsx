@@ -5,7 +5,7 @@ import "../image-slider/custom-slider.css";
 function CustomCarousel({ children }) {
     if (!Array.isArray(children)) {
         console.error("Children is not an array:", children);
-        return null; // or handle this case appropriately
+        return null;
       }
   const [activeIndex, setActiveIndex] = useState(0);
   const [slideDone, setSlideDone] = useState(true);
@@ -26,7 +26,7 @@ function CustomCarousel({ children }) {
       setSlideDone(false);
       setTimeID(
         setTimeout(() => {
-          slideNext(); // Now slideNext is defined before being used here
+          slideNext();
           setSlideDone(true);
         }, 5000)
       );
